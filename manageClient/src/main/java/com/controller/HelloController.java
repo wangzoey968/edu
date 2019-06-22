@@ -17,6 +17,7 @@ public class HelloController {
         ControlService service = context.getBean("controlService", ControlService.class);
 
         List<String> list = service.testList();
+
         System.out.println(list.toString());
 
     }
