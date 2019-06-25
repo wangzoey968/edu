@@ -3,12 +3,12 @@ package com.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.service.inter.TestServiceInter;
+import org.junit.Test;
 import org.springframework.stereotype.Service;
 
-import com.api.ControlService;
-
-@Service("controlService")
-public class ControlServiceImpl implements ControlService {
+@Service("testService")
+public class TestServiceImpl implements TestServiceInter {
 
     @Override
     public void test() {
