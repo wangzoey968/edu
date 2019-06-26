@@ -45,4 +45,19 @@
         </dependency>
     </dependencies>
 
+    <!--想要读取非resources下的配置文件,必须加上此配置-->
+    <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/java</directory>
+                <includes>
+                    <include>**/*.fxml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+
 </project>

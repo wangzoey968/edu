@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <ImageView fx:id="ivBackGround" fitHeight="357.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0"/>
+        <VBox alignment="CENTER_RIGHT" layoutY="210.0" spacing="5.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label fx:id="lbCompanyName" layoutX="542.0" layoutY="207.0" text="XXXX" AnchorPane.bottomAnchor="140.0"
+                       AnchorPane.rightAnchor="30.0">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets right="20.0"/>
+                    </VBox.margin>
+                </Label>
+                <StackPane layoutY="223.93215942382812">
+                    <children>
+                        <VBox opacity="0.77" prefHeight="130.0" style="-fx-background-color: #ffffff;"
+                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
+                        <VBox alignment="TOP_CENTER" prefWidth="600.0" spacing="5.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                              StackPane.alignment="BOTTOM_CENTER">
+                            <children>
+                                <VBox alignment="BOTTOM_LEFT" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Label text="公告：暂无最新公告" wrapText="true"/>
+                                    </children>
+                                </VBox>
+                                <HBox fx:id="hboxReg" alignment="CENTER_RIGHT" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Hyperlink fx:id="hlFindpwd" text="找回密码">
+                                            <HBox.margin>
+                                                <Insets right="10.0"/>
+                                            </HBox.margin>
+                                        </Hyperlink>
+                                        <Hyperlink fx:id="hlRegister" text="电脑未登记,点此申请登记。"/>
+                                    </children>
+                                </HBox>
+                                <GridPane alignment="CENTER_RIGHT" hgap="5.0" vgap="10.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <Label text="用户名："/>
+                                        <Label text="密　码：" GridPane.columnIndex="2"/>
+                                        <ComboBox fx:id="cmbUsername" editable="true" prefWidth="150.0"
+                                                  GridPane.columnIndex="1"/>
+                                        <PasswordField fx:id="tfPassword" prefWidth="150.0" GridPane.columnIndex="3"
+                                                       HBox.hgrow="ALWAYS"/>
+                                        <Button fx:id="btnLogin" mnemonicParsing="false" text="登录"
+                                                GridPane.columnIndex="4"/>
+                                        <Button fx:id="btnExit" mnemonicParsing="false" text="退出"
+                                                GridPane.columnIndex="5"/>
+                                    </children>
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0"/>
+                                        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0"/>
+                                        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0"/>
+                                        <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                                        <ColumnConstraints hgrow="NEVER" minWidth="10.0"/>
+                                        <ColumnConstraints hgrow="NEVER"/>
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER"/>
+                                    </rowConstraints>
+                                </GridPane>
+                            </children>
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="5.0"/>
+                            </padding>
+                        </VBox>
+                    </children>
+                </StackPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
