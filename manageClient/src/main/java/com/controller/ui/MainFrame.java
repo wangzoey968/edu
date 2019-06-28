@@ -3,6 +3,7 @@ package com.controller.ui;
 import com.util.FxmlUtil;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -15,16 +16,14 @@ public class MainFrame extends Stage {
     //单例
     private static MainFrame mainFrame = null;
 
-    public static MainFrame getFrame() {
+    public static MainFrame getInstance() {
         if (mainFrame == null) mainFrame = new MainFrame();
         return mainFrame;
     }
 
     private MainFrame() {
-        Node node = FxmlUtil.loadFXML(this);
-        HBox box = new HBox();
-        box.getChildren().add(node);
-        setScene(new Scene(box));
+        setTitle("XXXX");
+        setScene(new Scene((Parent)FxmlUtil.loadFXML(this)));
     }
 
 }

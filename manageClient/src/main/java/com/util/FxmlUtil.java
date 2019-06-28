@@ -28,6 +28,9 @@ public class FxmlUtil {
             System.out.println(obj.getClass().getResource(obj.getClass().getSimpleName() + ".fxml"));
             FXMLLoader loader = new FXMLLoader(obj.getClass().getResource(obj.getClass().getSimpleName() + ".fxml"));
             loader.setCharset(Charset.forName("UTF-8"));
+            if (loader.getController() == null) {
+                loader.setController(obj);
+            }
             parent = loader.load();
         } catch (Exception e) {
             e.printStackTrace();

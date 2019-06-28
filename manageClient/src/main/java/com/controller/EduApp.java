@@ -1,7 +1,6 @@
 package com.controller;
 
 import com.controller.ui.LoginStage;
-import com.controller.ui.MainFrame;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -12,9 +11,9 @@ public class EduApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        new LoginStage().show();
-//        MainFrame.getFrame().show();
-
+        new Cans().loadInters();
+        LoginStage.getInstance().show();
+        Cans.getUserService().saveUser();
     }
 
 }
